@@ -21,19 +21,39 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.18.0
 Dialog DLL:      TCM.DLL V1.14.9.0
  
 <h2>Project:</h2>
-G:\My_proj\LCDM200_emul-20171218T083215Z-001\LCDM200_emul\LCDM_emul.uvprojx
+G:\My_proj\LCDM200_emul\LCDM_emul.uvprojx
 Project File Date:  12/18/2017
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 2 (build 183)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
-Build target 'Target 1'
+Rebuild target 'Target 1'
+compiling lcdm2000.c...
+lcdm2000.c(2): warning:  #1-D: last line of file ends without a newline
+  #include "lcdm2000.h"
+.\src\lcdm2000.h(18): warning:  #1-D: last line of file ends without a newline
+  #endif
+lcdm2000.c: 2 warnings, 0 errors
 compiling serial.c...
 src\lcdm2000.h(18): warning:  #1-D: last line of file ends without a newline
   #endif
 src\serial.c: 1 warning, 0 errors
+compiling main.c...
+src\main.c(23): warning:  #144-D: a value of type "void (*)(void *)" cannot be used to initialize an entity of type "os_pthread"
+  
+sThreadDef (taskSerial, osPriorityNormal, 1, 0);                   // thread object
+src\main.c: 1 warning, 0 errors
+compiling misc.c...
+compiling stm32f10x_flash.c...
+compiling stm32f10x_dma.c...
+compiling stm32f10x_gpio.c...
+compiling RTX_Conf_CM.c...
+assembling startup_stm32f10x_md.s...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_usart.c...
+compiling system_stm32f10x.c...
 linking...
 Program Size: Code=8952 RO-data=388 RW-data=100 ZI-data=4860  
-".\Objects\LCDM_emul.axf" - 0 Error(s), 1 Warning(s).
+".\Objects\LCDM_emul.axf" - 0 Error(s), 4 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -52,8 +72,8 @@ Package Vendor: Keil
    * Component: Startup Version: 1.0.0
 
 <h2>Collection of Component include folders:</h2>
-  G:\My_proj\LCDM200_emul-20171218T083215Z-001\LCDM200_emul\RTE
-  G:\My_proj\LCDM200_emul-20171218T083215Z-001\LCDM200_emul\RTE\Device\STM32F103C8
+  G:\My_proj\LCDM200_emul\RTE
+  G:\My_proj\LCDM200_emul\RTE\Device\STM32F103C8
   C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.2.0\CMSIS\Include
   C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.2.0\CMSIS\RTOS\RTX\INC
   C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include
@@ -65,26 +85,26 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.0.2
 
    * Component: ARM::CMSIS:RTOS:Keil RTX:4.81.1
-      Source file:   CMSIS\RTOS\RTX\Templates\RTX_Conf_CM.c
       Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Semaphore.c
-      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Mutex.c
-      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\main.c
       Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\MemPool.c
-      Include file:  CMSIS\RTOS\RTX\INC\cmsis_os.h
-      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\MsgQueue.c
-      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Thread.c
-      Source file:   CMSIS\RTOS\RTX\SRC\ARM\SVC_Table.s
-      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Timer.c
-      Library file:  CMSIS\RTOS\RTX\LIB\ARM\RTX_CM3.lib
-      Include file:  CMSIS\RTOS\RTX\UserCodeTemplates\osObjects.h
       Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\MailQueue.c
+      Include file:  CMSIS\RTOS\RTX\UserCodeTemplates\osObjects.h
+      Include file:  CMSIS\RTOS\RTX\INC\cmsis_os.h
+      Source file:   CMSIS\RTOS\RTX\Templates\RTX_Conf_CM.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\main.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\MsgQueue.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Mutex.c
+      Library file:  CMSIS\RTOS\RTX\LIB\ARM\RTX_CM3.lib
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Thread.c
+      Source file:   CMSIS\RTOS\RTX\UserCodeTemplates\Timer.c
+      Source file:   CMSIS\RTOS\RTX\SRC\ARM\SVC_Table.s
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
       Source file:   Device\Source\system_stm32f10x.c
       Source file:   Device\Source\ARM\startup_stm32f10x_md.s
       Include file:  RTE_Driver\Config\RTE_Device.h
-Build Time Elapsed:  00:00:01
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+Build Time Elapsed:  00:00:06
 </pre>
 </body>
 </html>
