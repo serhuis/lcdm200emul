@@ -113,7 +113,7 @@ void taskSerial( void *pvParameters ){
 					case ROM_VERSION:
 						break;
 					
-					case LOWER_DISPENSE:
+					case LOWER_DISPENSE:  
 						break;
 					
 					case UPPER_LOWER_DISPENCE:
