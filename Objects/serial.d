@@ -15,4 +15,6 @@
 .\objects\serial.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
 .\objects\serial.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
 .\objects\serial.o: .\STM32F10x_StdPeriph_Driver\inc\misc.h
+.\objects\serial.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.2.0\CMSIS\RTOS\RTX\INC\cmsis_os.h
+.\objects\serial.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\serial.o: src\lcdm2000.h
